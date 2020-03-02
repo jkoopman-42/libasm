@@ -6,7 +6,7 @@
 #    By: jkoopman <jkoopman@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/02/21 13:22:34 by jkoopman       #+#    #+#                 #
-#    Updated: 2020/02/26 19:11:32 by jkoopman      ########   odam.nl          #
+#    Updated: 2020/03/02 14:02:11 by jkoopman      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,10 @@ CC_FLAGS = -Wall -Werror -Wextra
 
 SOURCES =	ft_read.s \
 			ft_write.s \
-			ft_strlen.s
+			ft_strlen.s \
+			ft_strcpy.s \
+			ft_strcmp.s \
+			ft_strdup.s
 
 BONUS_SOURCES =
 
@@ -67,7 +70,7 @@ bonus: $(OBJECTS)
 
 clean:
 	@printf "%-57b" "$(COM_COLOR)Cleaning up object files: $(NO_COLOR)"
-	@$(RM) $(OBJECTS) $(BONUS_OBJECTS)
+	@$(RM) $(OBJECTS) $(BONUS_OBJECTS) $(NAME_TEST)
 	@printf "%b" "$(OK_COLOR)$(OK_STRING)\n$(NO_COLOR)"
 
 fclean: clean
@@ -81,4 +84,4 @@ tester: all
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus tester
+.PHONY: all clean fclean re bonus
