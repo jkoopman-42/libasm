@@ -6,7 +6,7 @@
 #    By: jkoopman <jkoopman@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/02/21 13:22:34 by jkoopman       #+#    #+#                 #
-#    Updated: 2020/03/02 14:02:11 by jkoopman      ########   odam.nl          #
+#    Updated: 2020/03/05 16:40:56 by jkoopman      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ fclean: clean
 tester: all
 	@printf "$(WARN_COLOR)!!! TESTER !!! $(NO_COLOR)\n"
 	@$(CC) $(CC_FLAGS) -L. -l $(NAME_LIB) $(TEST_SOURCES) -o $(NAME_TEST)
+	@./tester
 
 re: fclean all
 
